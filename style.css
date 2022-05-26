@@ -27,15 +27,13 @@
   border: 1px solid black;
   display: inline-block;
   background-color: white;
+  
 }
 
 li {
   list-style: none;
 }
 
-.container-line {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
+#pixel-board {
+  font-size: 0;
 }
