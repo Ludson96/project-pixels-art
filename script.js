@@ -1,15 +1,28 @@
-const black = document.getElementById('black');
-const red = document.getElementById('red');
-const blue = document.getElementById('blue');
-const green = document.getElementById('green');
+let black = document.getElementById('black');
+let red = document.getElementById('red');
+let blue = document.getElementById('blue');
+let green = document.getElementById('green');
+let pixel = document.getElementsByClassName('pixel');
 
 function selectColor(event) {
-    const elementSelected = document.querySelector('.selected');
-    elementSelected.classList.remove('selected');
-    event.target.classList.add('selected')
+  const elementSelected = document.querySelector('.selected');
+  elementSelected.classList.remove('selected');
+  event.target.classList.add('selected');
 }
 
 black.addEventListener('click', selectColor);
 red.addEventListener('click', selectColor);
 blue.addEventListener('click', selectColor);
 green.addEventListener('click', selectColor);
+
+function paintColor (event) {
+  let elementSelected = document.getElementsByClassName('selected')[0];
+  const cssSelected = getComputedStyle(elementSelected, null);
+
+  let bgColor = cssSelected.getPropertyValue('background-color');
+  event.target.style.backgroundColor = bgColor;
+}
+
+  for (let index = 0; index < pixel.length; index += 1){
+    pixel[index].addEventListener('click', paintColor)
+  }
