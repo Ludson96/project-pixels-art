@@ -92,7 +92,7 @@ function createPixels(n) {
 function verificaTamanho(n) {
   if (n === '') {
     alert('Board inválido!');
-    createPixels(5)
+    createPixels(5);
   } else if (n < 5) {
     createPixels(5);
   } else if (n > 50) {
