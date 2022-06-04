@@ -103,43 +103,39 @@ function verificaTamanho(n) {
 // // Requisito 12 - gerar cor aleatória
 // https://www.horadecodar.com.br/2022/01/16/gerar-cor-aleatoria-com-javascript/
 function generateColor() {
-
   const letters = '0123456789ABCDEF';
   let color = '#';
-  
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i += 1) {
     color += letters[Math.floor(Math.random() * 16)];
   }
-  
   return color;
-  
 }
 
 red.style.backgroundColor = generateColor();
 blue.style.backgroundColor = generateColor();
 green.style.backgroundColor = generateColor();
 
-//PINTANDO OS QUADRADOS
+// PINTANDO OS QUADRADOS
 function paintColor(event) {
-  let elementSelected = document.getElementsByClassName('selected')[0];
+  const elementSelected = document.getElementsByClassName('selected')[0];
   const cssSelected = getComputedStyle(elementSelected, null);
 
-  let bgColor = cssSelected.getPropertyValue('background-color');
+  const bgColor = cssSelected.getPropertyValue('background-color');
   event.target.style.backgroundColor = bgColor;
 }
 for (let index = 0; index < pixel.length; index += 1) {
-  pixel[index].addEventListener('click', paintColor)
+  pixel[index].addEventListener('click', paintColor);
 }
 
 // PEGANDO O VALOR DO INPUT
 const getSubmit = document.querySelector('#generate-board');
 getSubmit.addEventListener('click', function(e) {
-  e.preventDefault()
-  var input = document.querySelector('#board-size');
-  var n = input.value;
-  redPixels()
+  e.preventDefault();
+  const input = document.querySelector('#board-size');
+  const n = input.value;
+  redPixels();
   verificaTamanho(n);
   for (let index = 0; index < pixel.length; index += 1) {
-  pixel[index].addEventListener('click', paintColor)
+  pixel[index].addEventListener('click', paintColor);
   }
 });
