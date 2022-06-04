@@ -90,7 +90,7 @@ function createPixels(n) {
 
 // VERIFICANDO TAMANHO DO MEU BOARD
 function verificaTamanho(n) {
-  if (n == '') {
+  if (n === '') {
     alert('Board inválido!');
   } else if (n < 5) {
     n = 5;
@@ -121,7 +121,8 @@ function paintColor(event) {
   const cssSelected = getComputedStyle(elementSelected, null);
 
   const bgColor = cssSelected.getPropertyValue('background-color');
-  event.target.style.backgroundColor = bgColor;
+  const evento = event;
+  evento.target.style.backgroundColor = bgColor;
 }
 for (let index = 0; index < pixel.length; index += 1) {
   pixel[index].addEventListener('click', paintColor);
@@ -137,7 +138,7 @@ function valueInput(event) {
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].addEventListener('click', paintColor);
   }
-};
+}
 
 const getSubmit = document.querySelector('#generate-board');
 getSubmit.addEventListener('click', valueInput);
