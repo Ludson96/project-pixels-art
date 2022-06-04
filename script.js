@@ -92,12 +92,14 @@ function createPixels(n) {
 function verificaTamanho(n) {
   if (n === '') {
     alert('Board inválido!');
+    createPixels(5)
   } else if (n < 5) {
-    n = 5;
+    createPixels(5);
   } else if (n > 50) {
-    n = 50;
+    createPixels(50);
+  } else {
+    createPixels(n);
   }
-  createPixels(n);
 }
 
 // // Requisito 12 - gerar cor aleatória
