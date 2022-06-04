@@ -128,14 +128,16 @@ for (let index = 0; index < pixel.length; index += 1) {
 }
 
 // PEGANDO O VALOR DO INPUT
-const getSubmit = document.querySelector('#generate-board');
-getSubmit.addEventListener('click', function(e) {
-  e.preventDefault();
+function valueInput(event) {
+  event.preventDefault();
   const input = document.querySelector('#board-size');
   const n = input.value;
   redPixels();
   verificaTamanho(n);
   for (let index = 0; index < pixel.length; index += 1) {
-  pixel[index].addEventListener('click', paintColor);
+    pixel[index].addEventListener('click', paintColor);
   }
-});
+};
+
+const getSubmit = document.querySelector('#generate-board');
+getSubmit.addEventListener('click', valueInput);
