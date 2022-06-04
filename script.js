@@ -2,7 +2,7 @@ const black = document.getElementById('black');
 const red = document.getElementById('red');
 const blue = document.getElementById('blue');
 const green = document.getElementById('green');
-let pixel = document.getElementsByClassName('pixel');
+const pixel = document.getElementsByClassName('pixel');
 const limpar = document.getElementById('clear-board');
 
 function selectColor(event) {
@@ -16,7 +16,7 @@ red.addEventListener('click', selectColor);
 blue.addEventListener('click', selectColor);
 green.addEventListener('click', selectColor);
 
-  //CRIANDO MEU BOARD
+// CRIANDO MEU BOARD
 function createBoard() {
   for (let linha = 0; linha < 5; linha += 1) {
     const newLi = document.createElement('li');
@@ -31,7 +31,7 @@ function createBoard() {
 }
 createBoard();
 
-  //Função evento de limpar
+// Função evento de limpar
 function clear() {
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].style.backgroundColor = 'white';
@@ -40,7 +40,7 @@ function clear() {
 
 limpar.addEventListener('click', clear);
 
-// //Requisito 10
+// // Requisito 10
 // RESTRIÇÃO DO INPUT
 function restricaoInput() {
   const newInput = document.createElement('input');
@@ -66,7 +66,7 @@ function btnVQV() {
 }
 btnVQV();
 
-  //APAGANDO PIXELS
+// APAGANDO PIXELS
 function redPixels() {
   const getLi = document.querySelectorAll('li');
   for (let index = 0; index < getLi.length; index += 1) {
@@ -74,21 +74,21 @@ function redPixels() {
   }
 }
 
-//CRIANDO PIXELS COM O VALOR DO INPUT
+// CRIANDO PIXELS COM O VALOR DO INPUT
 function createPixels(n) {
   for (let linha = 0; linha < n; linha += 1) {
-    let newLi =document.createElement('li');
-    let getPixelBoard = document.getElementById('pixel-board');
+    const newLi = document.createElement('li');
+    const getPixelBoard = document.getElementById('pixel-board');
     getPixelBoard.appendChild(newLi);
     for (let coluna = 0; coluna < n; coluna += 1) {
-      let newDiv = document.createElement('div');
-      newDiv.className = 'pixel'
-      newLi.appendChild(newDiv)
+      const newDiv = document.createElement('div');
+      newDiv.className = 'pixel';
+      newLi.appendChild(newDiv);
     }
   }
 }
 
-  //VERIFICANDO TAMANHO DO MEU BOARD
+// VERIFICANDO TAMANHO DO MEU BOARD
 function verificaTamanho(n) {
   if (n == '') {
     alert('Board inválido!');
@@ -100,10 +100,8 @@ function verificaTamanho(n) {
   createPixels(n);
 }
 
-
-
-  // //Requisito 12 - gerar cor aleatória
-  // https://www.horadecodar.com.br/2022/01/16/gerar-cor-aleatoria-com-javascript/
+// // Requisito 12 - gerar cor aleatória
+// https://www.horadecodar.com.br/2022/01/16/gerar-cor-aleatoria-com-javascript/
 function generateColor() {
 
   const letters = '0123456789ABCDEF';
@@ -133,7 +131,7 @@ for (let index = 0; index < pixel.length; index += 1) {
   pixel[index].addEventListener('click', paintColor)
 }
 
-//PEGANDO O VALOR DO INPUT
+// PEGANDO O VALOR DO INPUT
 const getSubmit = document.querySelector('#generate-board');
 getSubmit.addEventListener('click', function(e) {
   e.preventDefault()
