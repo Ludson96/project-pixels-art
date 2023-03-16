@@ -23,8 +23,11 @@
 ## O que foi desenvolvido
 
 Neste projeto, implementei um editor de arte com pixels em que a pessoa usuária poderá escolher uma cor em uma paleta de cores e poderá pintar o que quiser em um quadro branco :art: :artist:
+<div align="center">
 
 ![art com pixels][art-with-pixels]
+
+</div>
 
 ## Instruções para instalar e rodar
 
