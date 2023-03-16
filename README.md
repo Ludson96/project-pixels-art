@@ -24,6 +24,8 @@
 
 Neste projeto, implementei um editor de arte com pixels em que a pessoa usuária poderá escolher uma cor em uma paleta de cores e poderá pintar o que quiser em um quadro branco :art: :artist:
 
+![art com pixels][art-with-pixels]
+
 ## Instruções para instalar e rodar
 
 1. Clone o repo:
@@ -42,6 +44,7 @@ Neste projeto, implementei um editor de arte com pixels em que a pessoa usuária
 
 [Code Runner]: https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
 [Live Server]: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+[art-with-pixels]: ./art-with-pixels.gif
 [Git-logo]: https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white
 [Git-url]: https://git-scm.com
 [HTML5-logo]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
