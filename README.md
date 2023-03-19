@@ -1,10 +1,10 @@
-# Repositório do projeto Pixels Art
+# Repositório do projeto Pixels Art 👾
 
 # :construction: Estilização em desenvolvimento ! :construction:
 
 ## Módulo: FUNDAMENTOS
 
- Repositório possuí projeto desenvolvido no período que estive na **Trybe**, abordando sobre conceitos de estilização, manipulação do DOM com Javascript e reutilização de código.
+ Repositório possuí projeto desenvolvido no período que estive na **Trybe**, abordando sobre conceitos de estilização, manipulação do DOM com Javascript , Web Storage e reutilização de código.
 
 ## Informações de aprendizados
 
